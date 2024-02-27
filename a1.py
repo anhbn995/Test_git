@@ -1,2 +1,2 @@
-chào ae
-aaa
+x = 1
+b =2
