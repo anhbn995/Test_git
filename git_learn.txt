@@ -1,0 +1,20 @@
+##m erger nhánh dev vào main: đầu tiên merge nhanh main vào dev cho an toàn, sau đó ms merger dev vào main.
+
+(on branch development)$ git merge master
+(resolve any merge conflicts if there are any)
+git checkout master
+git merge development (there won't be any conflicts now)
+git push
+
+## pull code bằng fetch rebase (cơ chế khác với pull code ở điểm là nó sẽ k tạo 1 commit merger khi pull code vì pull = fetch + merger)
+
+git fetch (để lấy code mới trên cloud về)
+git rebase (để kiểm tra xem có conflict gì để giải quyết)
+git commit (xung đột)
+git push
+
+## Tạo những bản nháp ở local để có thể rebase mà không quan tâm đến những bản nháp đó
+git stash
+git stash list : lấy ra danh sách các stash đã cho vào, tối đa 3 list thôi
+git stash pop {name stash} : lấy về trạng thái nào đó đã lưu
+
